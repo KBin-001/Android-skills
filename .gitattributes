@@ -1,0 +1,2 @@
+﻿# 所有文本文件统一 LF（防止 Windows CRLF 破坏 bash 脚本）
+* text=auto eol=lf

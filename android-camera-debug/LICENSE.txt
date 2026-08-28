@@ -1,0 +1,14 @@
+Android-camera-debug Skill — 内部使用
+
+本 Skill 的知识来源为作者个人的 Android/MTK Camera 调试笔记与历史排障记录
+（D:\Kevin\笔记总结），属于私有工程经验整理。
+
+保留所有权利。未经作者书面许可，不得对外分发、转售或以任何形式公开发布
+本 Skill 的内容。项目内部团队使用不受此限。
+
+经验标注约定：
+- [已验证] 表示该结论已在真实项目中闭环验证。
+- [待验证] 表示基于通用知识或部分证据的推测性结论，使用前需在目标平台复核。
+
+引用格式建议：
+Android-camera-debug Skill (v1.0), Kevin's Camera Debug Notes, 2026.

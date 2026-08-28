@@ -2,7 +2,7 @@
 name: android-camera-debug
 description: >-
   Android/MTK Camera 排障与 bring-up 技能。当用户报告任何相机问题——Camera 打不开、预览黑屏/花屏、拍照/录像异常、摄像头切换卡顿、传感器 probe 失败、Sensor ID 读不到、I2C 通信失败、上电时序问题、前后摄切换异常、HEIF/JPEG 分辨率降级、颜色偏色、无法对焦——或要求合入新 Camera sensor 驱动（GC08A8/HI1333/BF2257 等）、检查 sensorlist/SensorListV2、排查 kernel imgsensor 日志与 Camera HAL 日志、修改 BUILD.bazel/defconfig/CameraConfig.mk/mtkcamvars.go、分析 power sequence/AVDD/DOVDD/DVDD/MCLK/RST、检查 metadata/tuning/wininfo/streaming_control/sensor_output_dataformat 时，必须使用本技能。按「现象→log→调用链→配置→硬件时序→修改→编译→验证」流程系统排查，避免凭经验乱改。
-license: LICENSE.txt
+license: Apache-2.0 (LICENSE.txt)
 compatibility: Android/MTK 平台 (MT6789/MT8781/MT8391 等), Kernel 6.x, Legacy imgsensor framework; 需要 adb 与代码树访问
 metadata:
   author: Kevin
@@ -58,7 +58,7 @@ metadata:
 - Camera HAL：`mtkcam` `camera` `configureStreams` `metadata` `tuning` `IdxMgr` `ISP_mapping` `ISP_param`
 - 尺寸/格式：`updatePictureSize` `requestSize` `targetSize` `odd HEIC size` `HEIC`（见 references/metadata-tuning.md）
 
-> 详细日志采集与分析见 `scripts/collect_camera_logs.sh` 与 references/log-analysis.md。
+> 详细日志采集与分析见 `scripts/collect_camera_logs.ps1` 与 references/log-analysis.md。
 
 ## 知识分层
 
@@ -71,6 +71,10 @@ metadata:
 
 - `[已验证]` — 来自已闭环复盘笔记，可直接复用
 - `[待验证]` — 推测性/通用结论，使用前必须在目标平台复核
+
+## 许可证
+
+本 Skill 以 [Apache-2.0](LICENSE.txt) 开源。知识整理自作者个人的 Android/MTK Camera 调试笔记；案例与排障结论标记遵循上述「已验证/待验证」约定，使用前请自行复核。
 
 ## 使用本技能的注意事项
 
